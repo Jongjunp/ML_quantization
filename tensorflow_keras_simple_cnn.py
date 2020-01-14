@@ -23,7 +23,7 @@ model.add(tf.keras.layers.Flatten())
 model.add(tf.keras.layers.Dense(64, activation='relu'))
 model.add(tf.keras.layers.Dense(10, activation='softmax'))
 
-model.compile(optimizer=tf.keras.optimizers.Nadam(),
+model.compile(optimizer=tf.keras.optimizers.Adam(),
               loss=tf.keras.losses.SparseCategoricalCrossentropy(),
               metrics=[tf.keras.metrics.SparseCategoricalAccuracy()])
 
